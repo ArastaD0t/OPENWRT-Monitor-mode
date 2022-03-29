@@ -2,7 +2,12 @@
 Open Wrt Monitor mode Switcher
 
 ## Install
-Copy me to /bin/...
+Copy me to /bin/... on yours ```OpenWrt``` device, and ```opkg install wireless-tools ```
+But you can try on yours unix PC but you need ```wireless-tools``` and run as ```su``` 
+
+
+## Usage
+
 ```
 ###                      
 # Wifi                   
