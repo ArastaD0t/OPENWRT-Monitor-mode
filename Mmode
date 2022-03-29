@@ -1,0 +1,72 @@
+#param $1 
+if [ "$1" = "" ]; then
+./Mmode --h
+else
+
+if [ "$1" = "--h" ]; then
+
+echo "###                    "
+echo "# Wifi                 "
+echo "     Monitor           " 
+echo "	        Mode         "
+echo "             Switcher #"
+echo "                    ###"
+echo ""
+echo "Usage:"
+echo "--------"
+echo "    --h    Show this help message page"
+echo "    --on   Enable monitor mode on all interfaces, or only on defined by -i "
+echo "    --off  Disable monitor mode on all interfaces, or only on defined by -i"
+echo "    --i    Select interface, must be combined with -on or -off"
+echo ""
+echo "		Example: Mmode --on --i wlan0"
+echo "----------------------------------------------------"
+echo "  ! Not all wifi cards/dongles have monitor mode !"
+echo""
+
+fi
+
+if [ "$1" = "--on" ]; then  
+if [ "$2" = "--i" ]; then
+
+ifconfig $3 down
+iwconfig $3 mode monitor
+ifconfig $3 up
+echo "Interface $3 is in monitor mode"
+
+else
+ 
+ifconfig wlan0 down
+ifconfig wlan1 down 
+iwconfig wlan0 mode monitor
+iwconfig wlan1 mode monitor
+ifconfig wlan0 up
+ifconfig wlan1 up
+echo "Interfaces is in monitor mode"
+fi
+
+fi
+
+if [ "$1" = "--off" ]; then
+if [ "$2" = "--i" ]; then
+
+ifconfig $3 down
+iwconfig $3 mode managed
+ifconfig $3 up
+echo "Interface $3 is in managed mode"
+
+else
+
+ifconfig wlan0 down
+ifconfig wlan1 down
+iwconfig wlan0 mode managed
+iwconfig wlan1 mode managed
+ifconfig wlan0 up
+ifconfig wlan1 up
+echo "Interfaces is in managed mode"
+
+fi
+
+fi
+
+fi  
