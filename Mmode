@@ -5,25 +5,27 @@ if [ "$1" = "" ]; then
 else
 
 if [ "$1" = "--h" ]; then
+echo ""
+echo " ###                     "
+echo " # Wifi                  "
+echo "      Monitor            " 
+echo "	         Mode           "
+echo "              Switcher # "
+echo "                     ### "
 
-echo "###                    "
-echo "# Wifi                 "
-echo "     Monitor           " 
-echo "	        Mode         "
-echo "             Switcher #"
-echo "                    ###"
 echo ""
-echo "Usage:"
+
+echo " Usage: "
 echo "--------"
-echo "    --h    Show this help message page"
-echo "    --on   Enable monitor mode on all interfaces (wlan0,wlan1) , or only on defined by --i "
-echo "    --off  Disable monitor mode on all interfaces (wlan0,wlan1) , or only on defined by --i"
-echo "    --i    Select interface, must be combined with --on or --off"
+echo "    --h    Show this help message page                                                       "
+echo "    --on   Enable monitor mode on all interfaces (wlan0,wlan1)  ,or only on defined by  --i  "
+echo "    --off  Disable monitor mode on all interfaces (wlan0,wlan1) ,or only on defined by  --i  "
+echo "    --i    Select interface, must be combined with --on or --off                             "
 echo ""
-echo "		Example: Mmode --on --i wlan0"
+echo "		Example: Mmode --on --i wlan0                     "
 echo "----------------------------------------------------"
-echo "  ! Not all wifi cards/dongles have monitor mode !"
-echo""
+echo "  ! Not all wifi cards/dongles have monitor mode !  "
+echo ""
 
 fi
 
