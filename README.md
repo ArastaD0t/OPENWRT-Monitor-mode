@@ -2,7 +2,7 @@
 Open Wrt Monitor mode Switcher  
   
 ## Install  
-Copy me to /bin/... on yours ```OpenWrt``` device, and ```opkg install wireless-tools ```  
+Copy me to /bin/... on yours ```OpenWrt``` device ```chmod +x Mmode ```, and ```opkg install wireless-tools ```  
 But you can try on yours linux PC but you need ```wireless-tools``` and run as ```sudo```   
   
 
