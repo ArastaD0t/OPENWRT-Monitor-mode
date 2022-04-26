@@ -12,7 +12,7 @@ But you can try on yours linux PC but you need ```wireless-tools``` and run as `
 ###                      
 # Wifi                   
      Monitor             
-                Mode           
+          Mode           
              Switcher #  
                     ###  
   
